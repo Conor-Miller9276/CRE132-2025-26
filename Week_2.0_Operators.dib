@@ -339,13 +339,12 @@ if(playercanaffordsword)
 
 int CardSpaceOpen;
 int CardSpaceTaken;
-int Cards = 5;
+int Cards = 0;
 int Increment = 1;
 int Decrement = 1;
 int CardDrawn;
 
 Cards += Increment = CardDrawn;
-
 
 bool PlaceCard = (CardSpaceOpen + Cards>0);
 bool DrawnCard = (Increment + Cards >=0);
@@ -356,7 +355,7 @@ if(PlaceCard)
 }
 else
 {
-    Console.WriteLine(" A card can't be placed here. Choose another space. ");
+    Console.WriteLine(" A card can't be placed here. Choose another space or draw a card. ");
 }
 
 if(PlaceCard)
