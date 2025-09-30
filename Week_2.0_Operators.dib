@@ -28,6 +28,19 @@ int Sum = Number_One + Number_Two;
 
 Console.WriteLine("The sum of two numbers is: " + Sum);
 
+#!csharp
+
+using System;
+// add two numbers in C# Edited
+
+int Number_One = 10;
+int Number_Two = 20;
+int Number_Three = 30;
+
+int Sum = Number_One + Number_Two;
+
+Console.WriteLine("The sum of two numbers is: " + Sum);
+
 #!markdown
 
 `+` with strings <br> 
@@ -45,6 +58,18 @@ string Text_Three = Text_One + Text_Two;
 
 Console.WriteLine("My message is: " + Text_Three);
 
+#!csharp
+
+// add two strings in C# Edited
+
+string Text_One = "Hello "; // note the spave at the end of the string
+string Text_Two = "Wonderful ";
+string Text_Three = "World ";
+
+string Text_Four = Text_One + Text_Two + Text_Three;
+
+Console.WriteLine("My Message is: " + Text_Four)
+
 #!markdown
 
 The Modulus operator `%` returns the remainder after a division. E.g. 10 divided by 3 = 3 remainder 1. <br>
@@ -60,6 +85,17 @@ int Divisor = 3;
 int Remainder = Number % Divisor; // modulus operator % returns the remainder of dividing two integers
 
 Console.WriteLine("The remainder of dividing " + Number + " by " + Divisor + " is " + Remainder);
+
+#!csharp
+
+// modulus operator in C#
+
+int Number = 20;
+int Divisor = 8;
+
+int Remainder = Number % Divisor; // modulus operator % returns the remainder of dividing two integers
+
+Console.WriteLine("The remainder of dividing " + Number + " by " + Divisor  + " is " + Remainder);
 
 #!markdown
 
@@ -79,6 +115,16 @@ Console.WriteLine("The new value of Number is: " + Number);
 
 #!csharp
 
+// Add and assign edited
+
+int Number = 13;
+int Increment = 8;
+Number += Increment; // Number = Number + Increment = 21
+
+Console.WriteLine("The new value of number is: " + Number);
+
+#!csharp
+
 // Subtract and assign
 
 int Number = 10;
@@ -86,6 +132,16 @@ int Decrement = 5;
 Number -= Decrement; // Number = Number + Increment = 15
 
 Console.WriteLine("The new value of Number is: " + Number);
+
+#!csharp
+
+// Subtract and assign edited
+
+int Number = 13;
+int Decrement = 8;
+Number -= Decrement; // Number = Number - Decrement = 5
+
+Console.WriteLine("The new value of Number is: " + Number)
 
 #!csharp
 
@@ -100,12 +156,34 @@ Console.WriteLine("The new value of Number is: " + Number);
 
 #!csharp
 
+// Multiply and assign edited 
+
+int Number = 13;
+int Multiplier = 8;
+
+Number *= Multiplier; // Number = Number * Multiplier = 104#
+
+Console.WriteLine("The new value of number is: " + Number);
+
+#!csharp
+
 // Divide and assign
 
 int Number = 10;
 int Divisor = 5;
 
 Number /= Divisor; // Number = Number / Divisor = 2
+
+Console.WriteLine("The new value of Number is: " + Number);
+
+#!csharp
+
+// Divide and assign edited
+
+int Number = 16;
+int Divisor = 8;
+
+Number /= Divisor; // Number = Number / Divisor + Remainder = 2
 
 Console.WriteLine("The new value of Number is: " + Number);
 
@@ -122,12 +200,39 @@ Console.WriteLine("The new value of Number is: " + Number);
 
 #!csharp
 
+// Modulus and assign edited
+
+int Number = 13;
+int Divisor = 8;
+
+Number %= Divisor; // Number = Number % Divisor = 5
+
+Console.WriteLine("The new value of number is: " + Number);
+
+#!csharp
+
 // Example of modulus operator to check if a number is even or odd
 // This can be used in timers - e.g. a counter continually increments and is modulus divided by 100 to check if a second has passed (no remainder at 100, 200, 300, etc.)
 
 int Number = 10;
 
 if (Number % 2 == 0) // if the remainder of dividing Number by 2 is 0, then Number is even
+{
+    Console.WriteLine(Number + " is an even number");
+}
+else
+{
+    Console.WriteLine(Number + " is an odd number");
+}
+
+#!csharp
+
+// Example of modulus operator to check if a number is even or odd edited
+// This can be used in timer - e.g. a counter continually increments and is modulus divided by 100 to check if a second has passed (no remainder at 100, 200. 300. etc.)
+
+int Number = 13;
+
+if (Number % 2 ==0) // if the remainder of dividing Number by 2 is 0, then number is even
 {
     Console.WriteLine(Number + " is an even number");
 }
@@ -162,6 +267,29 @@ else if (Number_One == Number_Two)
     Console.WriteLine(Number_One + " is equal to " + Number_Two);
 }
 
+#!csharp
+
+// less than operator <, greater than operator >, less than or equal to operator <=, edited
+// greater than or equal to operator >=, equal to operator ==, not qual to operator !=
+
+int Number_One = 13;
+int Number_Two = 8;
+
+if (Number_One > Number_Two)
+{
+    Console.WriteLine(Number_One + " is greater than " + Number_Two);
+}
+
+else if (Number_One < Number_Two)
+{
+    Console.WriteLine(Number_One + " is less than " + Number_Two);
+}
+
+else if (Number_One == Number_Two)
+{
+    Console.WriteLine(Number_One + " is equal to " + Number_Two);
+}
+
 #!markdown
 
 ### Logical Operators
@@ -183,6 +311,24 @@ bool Result_1_or_1 = true || true; // Result is true because both conditions are
 bool Result_0_or_0 = false || false; // Result is false because both conditions are false 
 bool Result_not_1 = !true; // Result is false because the NOT operator inverts the value of the condition
 bool Result_not_0 = !false; // Result is true because the NOT operator inverts the value of the condition
+
+#!csharp
+
+int playerMoney = 100; 
+int swordCost = 40;
+
+bool playercanaffordsword = (playerMoney >= swordCost);
+
+if(playercanaffordsword) 
+{
+    Console.WriteLine("Player can buy sword");
+}
+else 
+{
+    Console.WriteLine("player needs " + (swordCost - playerMoney) + " more money");
+}
+
+if(playercanaffordsword) 
 
 #!markdown
 
