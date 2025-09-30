@@ -316,6 +316,7 @@ bool Result_not_0 = !false; // Result is true because the NOT operator inverts t
 
 int playerMoney = 100; 
 int swordCost = 40;
+int Decrement = swordCost;
 
 bool playercanaffordsword = (playerMoney >= swordCost);
 
@@ -328,7 +329,11 @@ else
     Console.WriteLine("player needs " + (swordCost - playerMoney) + " more money");
 }
 
-if(playercanaffordsword) 
+if(playercanaffordsword)
+{
+    playerMoney -= Decrement;
+    Console.WriteLine("Player has "+ playerMoney  + " gold left. ");
+}
 
 #!markdown
 
