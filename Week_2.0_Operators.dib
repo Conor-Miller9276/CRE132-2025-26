@@ -332,7 +332,48 @@ else
 if(playercanaffordsword)
 {
     playerMoney -= Decrement;
-    Console.WriteLine("Player has "+ playerMoney  + " gold left. ");
+    Console.WriteLine("Player has " + playerMoney + " gold left. ");
+}
+
+#!csharp
+
+int CardSpaceOpen;
+int CardSpaceTaken;
+int Cards = 5;
+int Increment = 1;
+int Decrement = 1;
+int CardDrawn;
+
+Cards += Increment = CardDrawn;
+
+
+bool PlaceCard = (CardSpaceOpen + Cards>0);
+bool DrawnCard = (Increment + Cards >=0);
+
+if(PlaceCard)
+{
+    Console.WriteLine(" A card can be placed in this space. Should a card be placed here? ");
+}
+else
+{
+    Console.WriteLine(" A card can't be placed here. Choose another space. ");
+}
+
+if(PlaceCard)
+{
+    Cards -= Decrement;
+    Console.WriteLine(" You played the card.");
+}
+
+if (PlaceCard)
+{
+    Console.WriteLine(" You cannot draw a card after placing a card");
+}
+
+if(DrawnCard == true & PlaceCard == false)
+{
+    Cards += Increment;
+    Console.WriteLine(" You've drawn a card");
 }
 
 #!markdown
