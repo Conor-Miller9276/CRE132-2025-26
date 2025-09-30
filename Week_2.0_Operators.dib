@@ -337,17 +337,24 @@ if(playercanaffordsword)
 
 #!csharp
 
-int CardSpaceOpen;
-int CardSpaceTaken;
-int Cards = 0;
+int CardSpaceOpen = 0;
+int Cards = 5;
 int Increment = 1;
 int Decrement = 1;
 int CardDrawn;
+int SpaceOne;
+int SpaceTwo;
+int SpaceThree;
+int SpaceFour;
+int LeaderSpace;
+int SpellSpace;
+int TrapCardSpace;
 
 Cards += Increment = CardDrawn;
 
 bool PlaceCard = (CardSpaceOpen + Cards>0);
 bool DrawnCard = (Increment + Cards >=0);
+bool CantPlaceCard = (CardSpaceOpen == 1);
 
 if(PlaceCard)
 {
@@ -367,6 +374,11 @@ if(PlaceCard)
 if (PlaceCard)
 {
     Console.WriteLine(" You cannot draw a card after placing a card");
+}
+
+if(CantPlaceCard)
+{
+    Console.WriteLine(" A Card has already been placed here. Choose another space or draw a card. ");
 }
 
 if(DrawnCard == true & PlaceCard == false)
