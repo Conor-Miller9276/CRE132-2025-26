@@ -94,6 +94,10 @@ Change the text inside the `Console.WriteLine()` command. Make it print your nam
 
 Console.WriteLine("Hello, World!");
 
+#!csharp
+
+Console.WriteLine("Caterpie My Beloved.");
+
 #!markdown
 
 ## 4. What is a Variable?
@@ -158,6 +162,20 @@ Console.WriteLine("Character Name: " + characterName);
 Console.WriteLine("Level: " + characterLevel);
 Console.WriteLine("Attack Power: " + attackPower);
 Console.WriteLine("Is Friendly?: " + isFriendly);
+
+#!csharp
+
+// Declaring and assigning different types of variables
+string CharacterName = "Caterpie";
+int CharacterLevel = 3;
+float attackPower = 5.6f;
+bool isFriendly = false;
+
+// Using the variables by printing them to the console
+Console.WriteLine("Character Name: " + CharacterName);
+Console.WriteLine("Level: " + CharacterLevel);
+Console.WriteLine("Attack Power: " + attackPower);
+Console.WriteLine("Is Friendly: " + isFriendly);
 
 #!markdown
 
@@ -232,7 +250,9 @@ using Raylib_cs;
 // Window dimensions
 const int screenWidth = 800;
 const int screenHeight = 600;
-
+const int MessageXPos = 30;
+const int MessageYPos = 20;
+const int MessageFontSize = 50;
 // Initialization
 Raylib.InitWindow(screenWidth, screenHeight, "My First Game Window");
 Raylib.SetTargetFPS(60); // Set our game to run at 60 frames-per-second
@@ -243,9 +263,9 @@ while (!Raylib.WindowShouldClose()) // Detect window close button or ESC key
     // Drawing
     Raylib.BeginDrawing();
 
-    Raylib.ClearBackground(Color.White); // Clear the background to a light grey
+    Raylib.ClearBackground(Color.Red); // Clear the background to a light grey
 
-    Raylib.DrawText("My First Raylib Window!", 190, 200, 20, Color.Black);
+    Raylib.DrawText("My First Raylib Window!", MessageXPos, MessageYPos, MessageFontSize, Color.White);
 
     Raylib.EndDrawing();
 }
@@ -355,7 +375,10 @@ while (!WindowShouldClose())
     // Draw rectangles - xpos, ypos, width, height
     DrawRectangle(100, 100, 200, 150, Color.Red);
     DrawRectangleLines(100, 100, 200, 150, Color.Black);
-    
+
+    DrawRectangle(150, 350, 50, 50, Color.Orange);
+    DrawRectangleLines(150, 350, 50, 50, Color.Black);
+
     // Draw circles - xpos, ypos, radius
     DrawCircle(400, 225, 50, Color.Blue);
     DrawCircleLines(400, 225, 50, Color.Black);
