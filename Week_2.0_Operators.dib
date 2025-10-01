@@ -338,7 +338,7 @@ if(playercanaffordsword)
 #!csharp
 
 int CardSpaceOpen = 0;
-int Cards = 5;
+int Cards = 0;
 int Increment = 1;
 int Decrement = 1;
 int CardDrawn;
