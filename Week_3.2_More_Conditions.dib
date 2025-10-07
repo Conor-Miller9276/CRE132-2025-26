@@ -19,11 +19,13 @@ using System;
 // the value in the parentheses () is called a condition and it must either be evaluated to true or false
 
 // First code block
-if(true) {
+if(true) 
+{
     Console.WriteLine("The first code block will run because the condition is true");
 }
 // Second code block
-if (false) {
+if (false) 
+{
     Console.WriteLine("The second block will not run because the condition is false");
 }
 
