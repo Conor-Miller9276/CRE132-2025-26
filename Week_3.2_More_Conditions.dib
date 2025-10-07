@@ -47,6 +47,7 @@ while(gameRunning) {
     if (counter < 100) counter++;  // Increment the counter by 1 each loop until the counter hits 100. This is the same as counter = counter + 1
     else gameRunning = false;
 }
+
 Console.WriteLine("\nThank goodness that someone put a break statement in there!");
 
 #!markdown
@@ -75,12 +76,19 @@ We can also check for text equivalences.
 
 #!csharp
 
-string myName = "Thor";
+string myName = "Hulk";
 
 if (myName == "Thor") {
     Console.WriteLine("I am the mighty Thor!");
-} else {
+} 
+else if (myName == "Hulk")
+{
     Console.WriteLine("I am a feeble human!");
+}
+
+else
+{
+    Console.WriteLine("I am a feeble Human!");
 }
 
 #!markdown
@@ -173,7 +181,7 @@ using System;
 enum TimeOfDay
 {
     // Define the values for the enum: Morning, Afternoon, Evening, Night
-    Morning,
+    Morning, Afternoon, Evening, Night
     // more values here
 }
 
@@ -187,11 +195,13 @@ TimeOfDay timeOfDay = TimeOfDay.Morning;
 // if hour is greater than or equal to 5 and less than 12, it's morning
 if (hour >= 5 && hour < 12) timeOfDay = TimeOfDay.Morning;
 // if hour is greater than or equal to 12 and less than 17, it's afternoon
-
+else if (hour > 12 && hour <= 17) timeOfDay = TimeOfDay.Afternoon;
 // if hour is greater than or equal to 17 and less than 20, it's evening
-
+else if (hour > 17 && hour <= 20) timeOfDay = TimeOfDay.Evening;
 // otherwise, it's night
-
+else {
+    timeOfDay = TimeOfDay.Night;
+}
 
 // Output the time of day
 Console.WriteLine($"The current period of day is: {timeOfDay}"); // another way to format strings in C# using string interpolation
