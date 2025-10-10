@@ -154,11 +154,36 @@ Use the following code as a start point.
 
 #!csharp
 
+// THIS IS AI FIGURE THIS OUT
+using System;
 using System.Collections.Generic;
 
-List<int> Bullets = new List<int>{5, 10, 15, 20, 25};
+// Define a Bullet class with a Shoot method
+public class Bullet
+{
+    public int Range { get; set; }
+    public Bullet(int range)
+    {
+        Range = range;
+    }
+    public void Shoot()
+    {
+        Console.WriteLine($"Bullet with range {Range} has been shot!");
+    }
+}
 
-foreach(int bullet in Bullets)
+// Create a list of Bullet objects
+List<Bullet> Bullets = new List<Bullet>
+{
+    new Bullet(5),
+    new Bullet(10),
+    new Bullet(15),
+    new Bullet(20),
+    new Bullet(25)
+};
+
+// Iterate through the list and shoot each bullet
+foreach (Bullet bullet in Bullets)
 {
     bullet.Shoot();
 }
