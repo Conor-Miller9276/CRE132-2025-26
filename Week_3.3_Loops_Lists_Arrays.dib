@@ -154,7 +154,14 @@ Use the following code as a start point.
 
 #!csharp
 
-Sorting examples.
+using System.Collections.Generic;
+
+List<int> Bullets = new List<int>{5, 10, 15, 20, 25};
+
+foreach(int bullet in Bullets)
+{
+    bullet.Shoot();
+}
 
 #!markdown
 

@@ -76,14 +76,13 @@ We can also check for text equivalences.
 
 #!csharp
 
-string myName = "Hulk";
-
+string myName = "Hawkeye";
 if (myName == "Thor") {
     Console.WriteLine("I am the mighty Thor!");
 } 
 else if (myName == "Hulk")
 {
-    Console.WriteLine("I am a feeble human!");
+    Console.WriteLine("I am the incredible Hulk!");
 }
 
 else
