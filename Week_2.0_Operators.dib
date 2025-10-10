@@ -338,7 +338,7 @@ if(playercanaffordsword)
 #!csharp
 
 int CardSpaceOpen = 0;
-int Cards = 0;
+int Cards = 5;
 int Increment = 1;
 int Decrement = 1;
 int CardDrawn;
@@ -352,6 +352,7 @@ int TrapCardSpace;
 
 Cards += Increment = CardDrawn;
 
+
 bool PlaceCard = (CardSpaceOpen + Cards>0);
 bool DrawnCard = (Increment + Cards >=0);
 bool CantPlaceCard = (CardSpaceOpen == 1);
@@ -359,10 +360,6 @@ bool CantPlaceCard = (CardSpaceOpen == 1);
 if(PlaceCard)
 {
     Console.WriteLine(" A card can be placed in this space. Should a card be placed here? ");
-}
-else
-{
-    Console.WriteLine(" A card can't be placed here. Choose another space or draw a card. ");
 }
 
 if(PlaceCard)

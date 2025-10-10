@@ -96,6 +96,14 @@ The program should print:
 #!csharp
 
 // Your loop to print the song lyrics goes here!
+int bottles = 99;
+int countdown = 99;
+
+while(countdown > 0)
+{
+    Console.WriteLine(countdown + " Bottles of beer on the wall, " + countdown + " Bottles of beer. Take one down, pass it around " + (bottles -=1 ) + " Bottles of beer on the wall" );
+    countdown --;
+}
 
 #!markdown
 
