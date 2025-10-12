@@ -161,7 +161,51 @@ using System.Collections.Generic;
 // Define a Bullet class with a Shoot method
 public class Bullet
 {
-    public int Range { get; set; }
+    public int Range;
+    public Bullet(int range)
+    {
+        Range = range;
+    }
+    public void Shoot()
+    {
+        Console.WriteLine($"Bullet with range {Range} has been shot!");
+    }
+}
+
+// Create a list of Bullet objects
+List<Bullet> Bullets = new List<Bullet>
+{
+    new Bullet(5),
+    new Bullet(10),
+    new Bullet(15),
+    new Bullet(20),
+    new Bullet(25)
+};
+
+// Iterate through the list and shoot each bullet
+foreach (Bullet bullet in Bullets)
+{
+    bullet.Shoot();
+}
+
+#!markdown
+
+an you  a new `Bullet` (e.g., `new Bullet(10)`), the `Range` property of that bullet will be set to `10`.can you 
+
+#!csharp
+
+This line of code creates a new list called `Bullets` that can store objects of type `Bullet`. The list is initialized with five `Bullet` objects, each created with a different range value (5, 10, 15, 20, and 25). The curly braces `{ ... }` are used to add these `Bullet` objects to the list when it is created. So, after this line runs, `Bullets` will contain five bullets, each with its own range.
+
+#!csharp
+
+using System;
+using System.Collections.Generic;
+
+// Define a Bullet class with a Shoot method
+
+public class Bullet
+{
+    public int Range;
     public Bullet(int range)
     {
         Range = range;
