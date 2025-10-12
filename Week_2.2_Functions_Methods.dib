@@ -27,6 +27,17 @@ void SayHello()
 
 SayHello();
 
+#!csharp
+
+// Example: A simple method that prints a greeting EDITED
+
+void AskQuestion()
+{
+    Console.WriteLine("How are you?");
+}
+
+AskQuestion();
+
 #!markdown
 
 ## Real-World Example: Calculating Player Score
@@ -42,6 +53,18 @@ int CalculateScore(int coins, int enemiesDefeated)
 
 int score = CalculateScore(3, 2); // 3 coins, 2 enemies
 Console.WriteLine($"Player score: {score}");
+
+#!csharp
+
+// Example: Method to calculate player score EDITED
+
+int CalculateScore(int cardsDrawn, int cardsVanquished )
+{
+    return cardsDrawn * 5 + cardsVanquished * 3;
+}
+
+int score = CalculateScore(5, 3);
+Console.WriteLine($"Your Score is: {score}");
 
 #!markdown
 
@@ -73,7 +96,7 @@ bool IsCorrectGuess(int guess, int secret)
 }
 
 int secretNumber = 7;
-int playerGuess = 5;
+int playerGuess = 7;
 if (IsCorrectGuess(playerGuess, secretNumber))
 {
     Console.WriteLine("You guessed it!");
