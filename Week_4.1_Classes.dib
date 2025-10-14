@@ -10,6 +10,16 @@
 
 Run the following code and look at the output. Examine the code to see how a base Animal class if defined, then specific animal instances are declared using this base class as a prototype. There is further explanation of the code after the code cell. 
 
+#!markdown
+
+The parameters in the code are:
+
+- `string name` in the `Animal` class constructor:
+    ```csharp
+    public Animal(string name)
+    ```
+    This parameter is used to initialize the `Name` property of the `Animal` class.
+
 #!csharp
 
 using System;
@@ -36,6 +46,16 @@ class Animal
 }
 
 Console.WriteLine("Animal class blueprint created");
+
+#!markdown
+
+The line `public Dog(string name) : base(name) { }` defines a constructor for the `Dog` class that takes a `name` parameter. The `: base(name)` part calls the constructor of the base class (`Animal`) with the `name` argument, ensuring the base class is properly initialized. The `{ }` means the constructor does not have any additional code beyond calling the base constructor.
+
+#!csharp
+
+A constructor in C# is a special method that is called automatically when an object of a class is created. Its main purpose is to initialize the object's data or perform setup steps. Constructors have the same name as the class and do not have a return type.
+
+Example:
 
 #!csharp
 
@@ -80,7 +100,38 @@ class Cow : Animal
     }
 }
 
-Console.WriteLine("Dog, Cat, and Cow classes derived from Animal class");
+//Derived class: Duck
+class Duck : Animal
+{
+    public Duck(string name) : base(name) { }
+    
+    public override void MakeNoise()
+    {
+        Console.WriteLine($"{Name} says: Quack!");
+    }
+
+}
+
+//Derived class: Horse
+class Horse: Animal
+{
+    public Horse(string name) : base(name) { }
+
+    public override void MakeNoise()
+    {
+        Console.WriteLine($"{Name} says: Neigh!");
+    }
+
+}
+
+
+Console.WriteLine("Dog, Cat, Cow, Duck, Horse classes derived from Animal class");
+
+#!markdown
+
+A parameter in C# is a variable listed in the method, function, or constructor definition. It specifies what type of value must be provided when the method is called. The value you pass to the method is called an argument.
+
+**Example:**
 
 #!csharp
 
@@ -91,12 +142,14 @@ Animal genericAnimal = new Animal("Generic Animal");
 Dog dog = new Dog("Buddy");
 Cat cat = new Cat("Whiskers");
 Cow cow = new Cow("Bessie");
+Duck duck = new Duck("Daffy");
+Horse horse = new Horse ("Spirit");
 
 // Call the MakeNoise method on each instance
 genericAnimal.MakeNoise(); // Output: Generic Animal makes some generic animal noise
 
 // Demonstrate polymorphism
-Animal[] animals = { dog, cat, cow }; // Array of Animal objects
+Animal[] animals = { dog, cat, cow, duck, horse}; // Array of Animal objects
 
 foreach (Animal animal in animals) // Loop through each Animal object in the array
 {
