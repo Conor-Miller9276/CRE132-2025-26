@@ -118,29 +118,14 @@ class Duck : Animal
 
 //Derived class Horse
 class Horse : Animal
-
-
 {
-    public Duck(string name) : base(name) { }
+    public Horse(string name) : base(name) { }
     
     public override void MakeNoise()
     {
         Console.WriteLine($"{Name} says: Quack!");
     }
 
-}
-
-//Derived class: Horse
-class Horse: Animal
-
-{
-    public Horse(string name) : base(name) { }
-
-    public override void MakeNoise()
-    {
-
-        Console.WriteLine($"{Name} says Neigh!");
-    }
 }
 
 //Derrive class Sheep
@@ -155,12 +140,6 @@ class Pig : Animal
 }
 
 Console.WriteLine("Dog, Cat, Cow, Duck, Horse and Pig classes derived from Animal class");
-
-        Console.WriteLine($"{Name} says: Neigh!");
-
-
-
-Console.WriteLine("Dog, Cat, Cow, Duck, Horse classes derived from Animal class");
 
 #!markdown
 
@@ -182,9 +161,6 @@ Duck duck = new Duck("Quacker");
 Horse horse = new Horse("ferdinand");
 Pig pig = new Pig ("PorkPatch");
 
-Duck duck = new Duck("Daffy");
-Horse horse = new Horse ("Spirit");
-
 
 // Call the MakeNoise method on each instance
 genericAnimal.MakeNoise(); // Output: Generic Animal makes some generic animal noise
@@ -192,9 +168,6 @@ genericAnimal.MakeNoise(); // Output: Generic Animal makes some generic animal n
 // Demonstrate polymorphism
 
 Animal[] animals = { dog, cat, cow, duck, horse, pig }; // Array of Animal objects
-
-Animal[] animals = { dog, cat, cow, duck, horse}; // Array of Animal objects
-
 
 foreach (Animal animal in animals) // Loop through each Animal object in the array
 {
