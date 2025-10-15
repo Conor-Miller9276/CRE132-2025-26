@@ -14,12 +14,17 @@ Read the following code examples. These are different ways to collect numbers to
 
 **for loop**
 
+#!markdown
+
+This line creates an array of integers called `iArray` and initializes it with the values 1, 2, 3, 4, and 5. An array is a fixed-size collection that can store multiple values of the same type. Here, `int[]` means it's an array of integers, and the curly braces `{ ... }` list the values that will be stored in the array.
+
 #!csharp
 
 using System;
 
+
 // an array of integers
-int [] iArray = {1, 2, 3, 4, 5};
+float[] iArray = {1.4f, 2.6f, 3.7f, 4.3f, 5.1f};
 
 // loop through the array and print each element
 for (int i = 0; i < iArray.Length; i++) {
